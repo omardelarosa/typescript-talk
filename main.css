@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i|Roboto+Mono:400,400i,700,700i');
+
+/**
+ * Color Pallette:
+ * 1 - #447604
+ * 2 - #6CC551
+ * 3 - #9FFCDF
+ * 4 - #52AD9C
+ * 5 - #2A3A2F
+ *
+ */
+
+:root {
+    /* --main-bg-color: #000000; */
+    --main-bg-color: #9FFCDF;
+    /* --main-text-color: #ffffff; */
+    --main-text-color: #2A3A2F;
+    --code-bg-color: #222222;
+    --code-text-color: #ffffff;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+}
+
+.remark-container,
+.remark-slide,
+.remark-slide-content {
+    background-color: var(--main-bg-color);
+}
+
+.remark-slide-scaler {
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Arimo', sans-serif;
+}
+.remark-code,
+.remark-inline-code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--code-bg-color);
+    color: var(--code-text-color);
+}
