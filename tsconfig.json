@@ -1,0 +1,12 @@
+{
+  "extends": "./configs/base",
+  "compilerOptions": {
+    "emitDeclarationOnly": true
+  },
+  "references": [
+    { "path": "./src/browser" },
+    { "path": "./src/server" },
+    { "path": "./src/shared" }
+  ],
+  "exclude": ["node_modules", "test"]
+}

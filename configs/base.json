@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSourceMap": true,
+    "baseUrl": "..",
+    "declarationDir": "../dist/types",
+    "paths": {
+      "@app/*": ["src/*"]
+    },
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "lib": ["es6", "dom"],
+    "esModuleInterop": true,
+    "target": "es5",
+    "rootDirs": ["../src", "../dist"],
+    "moduleResolution": "node"
+  }
+}

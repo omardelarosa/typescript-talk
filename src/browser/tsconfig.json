@@ -1,0 +1,7 @@
+{
+  "extends": "../../configs/base",
+  "compilerOptions": {
+    "outDir": "../../dist/browser"
+  },
+  "references": [{ "path": "../shared" }]
+}

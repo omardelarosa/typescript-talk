@@ -1,0 +1,33 @@
+{
+  "name": "ts3prez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run mocha",
+    "mocha": "./node_modules/.bin/ts-mocha --paths -p test/tsconfig.json test/**/*.spec.ts",
+    "build": "npm run clean && ./node_modules/.bin/tsc --build",
+    "build:debug": "./node_modules/.bin/tsc --build --verbose",
+    "test:watch": "./node_modules/.bin/npm-watch test",
+    "build:watch": "./node_modules/.bin/tsc --build --watch",
+    "build:watch:debug": "./node_modules/.bin/npm-watch build:debug",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omardelarosa/typescript-talk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omardelarosa/typescript-talk/issues"
+  },
+  "homepage": "https://github.com/omardelarosa/typescript-talk#readme",
+  "dependencies": {
+    "typescript": "^3.0.1"
+  }
+}

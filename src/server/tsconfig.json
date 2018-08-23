@@ -1,0 +1,7 @@
+{
+  "extends": "../../configs/base",
+  "compilerOptions": {
+    "outDir": "../../dist/server"
+  },
+  "references": [{ "path": "../shared" }]
+}
