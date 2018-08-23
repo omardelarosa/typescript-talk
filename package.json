@@ -15,11 +15,15 @@
     "test:watch": "./node_modules/.bin/npm-watch test",
     "build:watch": "./node_modules/.bin/tsc --build --watch",
     "build:watch:debug": "./node_modules/.bin/npm-watch build:debug",
+    "build:browser:bundle": "./node_modules/.bin/rollup dist/browser/main.js --file dist/browser/bundle.js --format iife",
     "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omardelarosa/typescript-talk.git"
+  },
+  "_moduleAliases": {
+    "@app": "dist"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +32,12 @@
   },
   "homepage": "https://github.com/omardelarosa/typescript-talk#readme",
   "dependencies": {
+    "@types/express": "^4.16.0",
+    "express": "^4.16.3",
+    "module-alias": "^2.1.0",
     "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^0.64.1"
   }
 }

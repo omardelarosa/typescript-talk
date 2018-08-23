@@ -1,7 +1,7 @@
-import { API } from "@app/shared/api";
-export class BrowserApp {
-  public name: string;
-  constructor() {}
-}
+// Resolves @app references
+import "module-alias/register";
 
-console.log("BLAH", API);
+import { API } from "@app/shared/api";
+
+const api = new API();
+console.log("Hello HTML", api.render());

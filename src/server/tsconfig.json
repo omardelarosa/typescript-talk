@@ -1,7 +1,8 @@
 {
   "extends": "../../configs/base",
   "compilerOptions": {
-    "outDir": "../../dist/server"
+    "outDir": "../../dist/server",
+    "types": ["express"]
   },
   "references": [{ "path": "../shared" }]
 }

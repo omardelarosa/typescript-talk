@@ -5,7 +5,6 @@
     "declarationMap": true,
     "inlineSourceMap": true,
     "baseUrl": "..",
-    "declarationDir": "../dist/types",
     "paths": {
       "@app/*": ["src/*"]
     },

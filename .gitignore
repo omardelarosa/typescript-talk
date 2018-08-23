@@ -2,3 +2,4 @@
 dist/
 workspace/
 node_modules/
+declarations/

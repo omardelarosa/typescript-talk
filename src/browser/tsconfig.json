@@ -1,7 +1,13 @@
 {
   "extends": "../../configs/base",
   "compilerOptions": {
-    "outDir": "../../dist/browser"
+    "outDir": "../../dist/browser",
+    "outFile": "../../dist/browser/bundle.js",
+    "module": "system",
+    "declarationDir": null,
+    "target": "es3",
+    "lib": ["es2015", "dom"],
+    "types": []
   },
   "references": [{ "path": "../shared" }]
 }
