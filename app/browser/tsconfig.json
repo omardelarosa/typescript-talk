@@ -1,0 +1,24 @@
+{
+  "extends": "../../configs/base",
+  "compilerOptions": {
+    "outDir": "../../dist/browser",
+    "module": "es5",
+    "target": "es5",
+    "moduleResolution": "node",
+    "lib": [
+      "es2015",
+      "es5",
+      "dom"
+    ],
+    "files": [
+      "./main.ts",
+      "../shared/**/*"
+    ],
+    "types": []
+  },
+  "references": [
+    {
+      "path": "../shared"
+    }
+  ]
+}

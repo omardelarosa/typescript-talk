@@ -1,12 +1,21 @@
 {
   "extends": "./configs/base",
   "compilerOptions": {
-    "declarationDir": "./declarations"
+    "outDir": "./dist/types"
   },
   "references": [
-    { "path": "./src/browser" },
-    { "path": "./src/server" },
-    { "path": "./src/shared" }
+    {
+      "path": "./app/browser"
+    },
+    {
+      "path": "./app/server"
+    },
+    {
+      "path": "./app/shared"
+    }
   ],
-  "exclude": ["node_modules", "test"]
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
 }

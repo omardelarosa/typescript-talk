@@ -54,6 +54,12 @@ class: center, middle
 
 ---
 
+### How Does TypeScript Help You? (TBD)
+- asdfasdf
+- asdfasdf
+
+---
+
 ### Recommended Reading
 - [Architectural Overview](https://github.com/Microsoft/TypeScript/wiki/Architectural-Overview)
 

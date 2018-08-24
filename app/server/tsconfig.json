@@ -1,0 +1,17 @@
+{
+  "extends": "../../configs/base",
+  "compilerOptions": {
+    "outDir": "../../dist/server/",
+    "types": [
+      "express"
+    ],
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+  },
+  "references": [
+    {
+      "path": "../shared"
+    }
+  ]
+}

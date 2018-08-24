@@ -1,6 +1,7 @@
 {
   "extends": "../../configs/base",
   "compilerOptions": {
-    "outDir": "../../dist/shared"
+    "outDir": "../../dist/shared",
+    "module": "commonjs"
   }
 }

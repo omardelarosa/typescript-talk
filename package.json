@@ -10,6 +10,7 @@
   "scripts": {
     "test": "npm run mocha",
     "mocha": "./node_modules/.bin/ts-mocha --paths -p test/tsconfig.json test/**/*.spec.ts",
+    "start": "node dist/server/main.js",
     "build": "npm run clean && ./node_modules/.bin/tsc --build",
     "build:debug": "./node_modules/.bin/tsc --build --verbose",
     "test:watch": "./node_modules/.bin/npm-watch test",

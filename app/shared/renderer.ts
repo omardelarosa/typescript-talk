@@ -1,8 +1,8 @@
 export function renderer(locals = {}): string {
-  const browserLibPath = "/dist/browser/bundle.js";
-  const stylesheetPath = "/docs/main.css";
-  const title = "demo app";
-  return `
+    const browserLibPath = "/dist/browser/main.js";
+    const stylesheetPath = "/docs/main.css";
+    const title = "demo app";
+    return `
     <!DOCTYPE html>
         <html>
         <head>
@@ -14,7 +14,8 @@ export function renderer(locals = {}): string {
         </head>
 
         <body>
-            <script src="${browserLibPath}">
+            <script>var exports = {}; function require() {}; </script>
+            <script type="module" src="${browserLibPath}">
             </script>
         </body>
     </html>
