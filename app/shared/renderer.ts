@@ -1,4 +1,8 @@
 import { ENTRY_LIB_PATH, DEFAULT_PAGE_TITLE } from "./constants";
+import marked from "marked";
+
+// TODO: add options here
+const markdownOptions = {};
 
 const STYLE_TAGS = [
   /*html*/ `<link rel="stylesheet" type="text/css" media="screen" href="/docs/main.css" />`
@@ -25,7 +29,7 @@ export const nullRenderer: Renderer = () => "";
 export const markdownRenderer: Renderer = (
   locals: { markdown: string } & ITemplateLocals // Composable interfaces
 ): string => {
-  return "";
+  return marked(locals.markdown, markdownOptions);
 };
 
 export const layoutRenderer: Renderer = (
