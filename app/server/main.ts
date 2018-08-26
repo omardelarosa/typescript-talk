@@ -13,6 +13,7 @@ const app: Express = express();
 app.use("/dist", express.static("dist"));
 app.use("/lib", express.static("lib"));
 app.use("/docs", express.static("docs"));
+app.use("/node_modules", express.static("node_modules"));
 
 app.get("/app", (req: Request, res: Response) => {
   // Render some default landing page.
