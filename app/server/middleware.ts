@@ -5,7 +5,10 @@ import * as path from "path";
 import glob from "glob";
 import { MARKDOWN_DIR_NAME } from "../shared/constants";
 
-export const respondWithRenderedMarkdown = async (req: Request, res: Response) => {
+export const respondWithRenderedMarkdown = async (
+  req: Request,
+  res: Response
+) => {
   let mdPath = API.strings.getFilePathFromReqPath(req.path);
   const extension = API.strings.getFileExtension(mdPath);
   const filePathify = (s: string) => `${path.join(process.cwd(), s)}`;
