@@ -1,7 +1,7 @@
 {
   "extends": "../../configs/tsconfig.base",
   "compilerOptions": {
-    "outDir": "../../dist/server/",
+    "outDir": "../../dist/app/server/",
     "types": ["express"],
     "target": "es5",
     "module": "commonjs",

@@ -1,7 +1,7 @@
 {
   "extends": "../../configs/tsconfig.base",
   "compilerOptions": {
-    "outDir": "../../dist/browser/",
+    "outDir": "../../dist/app/browser/",
     "module": "umd",
     "target": "es5",
     "moduleResolution": "node",

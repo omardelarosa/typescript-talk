@@ -13,10 +13,12 @@
     "lint": "echo 'lint coming soon...'",
     "start": "npm run server",
     "dev": "./node_modules/.bin/concurrently --names 'BUILD,SERVER' -c 'bgBlue.bold,bgMagenta.bold' 'npm:build:watch' 'npm:server:watch'",
-    "server": "node dist/server/main.js",
-    "server:watch": "./node_modules/.bin/nodemon -w dist/server dist/server/main.js",
+    "dev:debug": "./node_modules/.bin/concurrently --names 'BUILD,SERVER' -c 'bgBlue.bold,bgMagenta.bold' 'npm:build:watch:debug' 'npm:server:watch'",
+    "server": "node dist/app/server/main.js",
+    "server:watch": "./node_modules/.bin/nodemon -w dist/app/server dist/app/server/main.js",
     "build": "npm run clean && ./node_modules/.bin/tsc --build",
-    "build:watch": "./node_modules/.bin/tsc --build --watch --verbose --pretty",
+    "build:watch": "./node_modules/.bin/tsc --build --watch",
+    "build:watch:debug": "./node_modules/.bin/tsc --build --watch --verbose",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -36,6 +38,8 @@
     "@types/express": "4.16.0",
     "concurrently": "4.0.0",
     "express": "4.16.3",
+    "glob": "7.1.2",
+    "marked": "^0.5.0",
     "systemjs": "0.21.4",
     "typescript": "3.0.1"
   },

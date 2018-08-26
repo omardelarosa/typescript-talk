@@ -1,8 +1,7 @@
 {
   "extends": "./configs/tsconfig.base",
   "compilerOptions": {
-    "outDir": "./dist/types",
-    "emitDeclarationOnly": true,
+    "outDir": "./dist",
     "paths": {
       "@app/*": ["app/*"]
     }
