@@ -1,3 +1,7 @@
-import * as API from "../shared/api.js";
+import { render } from "@app/shared/api.js";
 
-console.log('API', API);
+console.log("render", render());
+
+export default function browserApp() {
+  console.log("Initializing browser app");
+}

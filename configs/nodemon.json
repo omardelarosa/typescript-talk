@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "ignore": ["test/", "fixtures/*", "src/", "node_modules/"],
+  "watch": ["dist/server/"],
+  "ext": ["js"]
+}

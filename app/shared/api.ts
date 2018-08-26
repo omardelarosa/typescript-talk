@@ -1,13 +1,14 @@
-import { renderer } from "./renderer";
+import renderer from "./renderer.js";
 
 export function render(): string {
-  return renderer()
-};
+  return renderer();
+}
 
 export default {
+  render,
   greeter: () => {
     return {
-      greeting: 'hello'
-    }
+      greeting: "hello"
+    };
   }
-}
+};

@@ -1,7 +1,11 @@
 {
-  "extends": "./configs/base",
+  "extends": "./configs/tsconfig.base",
   "compilerOptions": {
-    "outDir": "./dist/types"
+    "outDir": "./dist/types",
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@app/*": ["app/*"]
+    }
   },
   "references": [
     {
@@ -14,8 +18,5 @@
       "path": "./app/shared"
     }
   ],
-  "exclude": [
-    "node_modules",
-    "test"
-  ]
+  "exclude": ["node_modules", "test", "dist"]
 }

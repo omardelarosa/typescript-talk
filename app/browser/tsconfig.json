@@ -1,20 +1,16 @@
 {
-  "extends": "../../configs/base",
+  "extends": "../../configs/tsconfig.base",
   "compilerOptions": {
-    "outDir": "../../dist/browser",
-    "module": "es5",
+    "outDir": "../../dist/browser/",
+    "module": "umd",
     "target": "es5",
     "moduleResolution": "node",
-    "lib": [
-      "es2015",
-      "es5",
-      "dom"
-    ],
-    "files": [
-      "./main.ts",
-      "../shared/**/*"
-    ],
-    "types": []
+    "lib": ["es2015", "es5", "dom"],
+    "types": [],
+    "files": ["../shared/api.ts"],
+    "paths": {
+      "@app/*": ["app/*"]
+    }
   },
   "references": [
     {

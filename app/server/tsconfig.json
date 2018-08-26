@@ -1,10 +1,9 @@
 {
-  "extends": "../../configs/base",
+  "extends": "../../configs/tsconfig.base",
   "compilerOptions": {
     "outDir": "../../dist/server/",
-    "types": [
-      "express"
-    ],
+    "types": ["express"],
+    "target": "es5",
     "module": "commonjs",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node"

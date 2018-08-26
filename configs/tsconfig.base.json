@@ -6,22 +6,16 @@
     "inlineSourceMap": true,
     "baseUrl": "..",
     "paths": {
-      "@app/*": [
-        "app/*"
-      ]
+      "@app/*": ["app/*"]
     },
+    "resolveJsonModule": false,
     "noImplicitAny": false,
     "strictNullChecks": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "esModuleInterop": true,
     "target": "es5",
-    "rootDirs": [
-      "../app",
-      "../dist"
-    ],
-    "moduleResolution": "node"
+    "rootDirs": ["../app", "../dist"],
+    "moduleResolution": "node",
+    "preserveWatchOutput": false
   }
 }

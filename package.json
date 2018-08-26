@@ -10,13 +10,13 @@
   "scripts": {
     "test": "npm run mocha",
     "mocha": "./node_modules/.bin/ts-mocha --paths -p test/tsconfig.json test/**/*.spec.ts",
-    "start": "node dist/server/main.js",
+    "lint": "echo 'lint coming soon...'",
+    "start": "npm run server",
+    "dev": "./node_modules/.bin/concurrently --names 'BUILD,SERVER' -c 'bgBlue.bold,bgMagenta.bold' 'npm:build:watch' 'npm:server:watch'",
+    "server": "node dist/server/main.js",
+    "server:watch": "./node_modules/.bin/nodemon -w dist/server dist/server/main.js",
     "build": "npm run clean && ./node_modules/.bin/tsc --build",
-    "build:debug": "./node_modules/.bin/tsc --build --verbose",
-    "test:watch": "./node_modules/.bin/npm-watch test",
-    "build:watch": "./node_modules/.bin/tsc --build --watch",
-    "build:watch:debug": "./node_modules/.bin/npm-watch build:debug",
-    "build:browser:bundle": "./node_modules/.bin/rollup dist/browser/main.js --file dist/browser/bundle.js --format iife",
+    "build:watch": "./node_modules/.bin/tsc --build --watch --verbose --pretty",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -33,12 +33,13 @@
   },
   "homepage": "https://github.com/omardelarosa/typescript-talk#readme",
   "dependencies": {
-    "@types/express": "^4.16.0",
-    "express": "^4.16.3",
-    "module-alias": "^2.1.0",
-    "typescript": "^3.0.1"
+    "@types/express": "4.16.0",
+    "concurrently": "4.0.0",
+    "express": "4.16.3",
+    "systemjs": "0.21.4",
+    "typescript": "3.0.1"
   },
   "devDependencies": {
-    "rollup": "^0.64.1"
+    "nodemon": "1.18.3"
   }
 }

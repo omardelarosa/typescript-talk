@@ -1,7 +1,8 @@
 {
-  "extends": "../../configs/base",
+  "extends": "../../configs/tsconfig.base",
   "compilerOptions": {
     "outDir": "../../dist/shared",
-    "module": "commonjs"
+    "module": "umd",
+    "target": "es5"
   }
 }
