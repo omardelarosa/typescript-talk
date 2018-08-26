@@ -7,7 +7,6 @@
     "moduleResolution": "node",
     "lib": ["es2015", "es5", "dom"],
     "types": [],
-    "files": ["../shared/api.ts"],
     "paths": {
       "@app/*": ["app/*"]
     }
