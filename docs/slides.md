@@ -1,18 +1,42 @@
 class: center, middle
 
-## Using TypeScript 3.0 as Your Only Build Tool
+# Using TypeScript 3.0 as Your Only Build Tool
 
 ---
 
-### About Me
+class: center, middle
 
-#### - I'm Omar Delarosa
+## About Me
 
-#### - I work at Grubhub making food delivery web UIs.
+---
 
-#### - Before that, I used to work at Vice making publishing web UIs.
+class: center, middle
 
-#### - Used TypeScript extensively at both jobs.
+### I'm Omar Delarosa
+
+---
+
+class: center, top
+
+### I work at Grubhub.
+
+![](http://photos.prnewswire.com/prn/20130820/CG66276LOGO?max=700)
+
+---
+
+class: center, top
+
+### I used to work at Vice
+
+![](https://pmcvariety.files.wordpress.com/2013/10/vice_logo_0.jpg?w=640)
+
+---
+
+class: center, middle
+
+### Used TypeScript extensively at both jobs.
+
+![](https://cdn-images-1.medium.com/max/500/1*rfcuHd_GMkZ7VmyLiRMKGA.png)
 
 ---
 
@@ -30,15 +54,43 @@ class: center, middle
 
 ## Why TypeScript?
 
+# 🤔
+
 ---
 
-### First Things First
+class: center, top
 
-#### - Not everyone needs TypeScript
+### Haters Gonna Hate
 
-#### - TypeScript !== Flow
+![](https://media.giphy.com/media/10jXAG6N4nw57a/giphy.gif)
 
-#### - Do not stop using Webpack, Rollup, bundlers
+---
+
+class: center, middle
+
+### Not everyone needs TypeScript
+
+![](https://media.giphy.com/media/l2YWF3PqWrgndQOyI/giphy.gif)
+
+---
+
+class: center, top
+
+### Flow?
+
+```typescript
+TypeScript !== Flow;
+```
+
+![](https://sdtimes.com/wp-content/uploads/2014/11/1118.sdt-flow.png)
+
+---
+
+class: center, top
+
+### Keep Using Webpack, Rollup, bundlers
+
+![](https://cdn-images-1.medium.com/max/800/1*rtjClMZ8sq3cLFT9Aq8Xyg.png)
 
 ---
 
@@ -48,29 +100,81 @@ class: center, middle
 
 ---
 
-### TypeScript Defined
+class: center, middle
 
-#### - TypeScript is a super set of JavaScript.
+### TypeScript is a super set of JavaScript.
 
-#### - It supports many "new" features of the language often found in proposals or specs (i.e. `ES{YYYY}`)
-
-#### - TypeScript is a compiler
-
-#### - TypeScript is a type-checker
-
-#### - TypeScript is (kinda) opt-in
+```javascript
+const TypeScript = Set(["JS", "TypeScript", "ES6"]);
+```
 
 ---
 
-### How Does TypeScript Help You? (TBD)
+class: center, middle
 
-#### - Larger codebases that benefit from type annotations and type checking
+### It supports many "new" features of the language often found in proposals or specs
 
-#### - When you want limited runtime overhead
+```typescript
+const TypeScript = Set([`ES${currentYear}`]);
+```
 
-#### - Browser/Node interop
+---
 
-#### - Recommended Reading [Architectural Overview](https://github.com/Microsoft/TypeScript/wiki/Architectural-Overview)
+class: center, middle
+
+### TypeScript is a compiler
+
+---
+
+class: center, middle
+
+### TypeScript is a compile-time type-checker
+
+---
+
+class: center, middle
+
+### TypeScript is (kinda) opt-in
+
+---
+
+class: center, middle
+
+## How Does TypeScript Help You?
+
+---
+
+class: center, top
+
+### Wrangling Large Projects
+
+## ![](https://qph.fs.quoracdn.net/main-qimg-f8b7d2fd534420e58972b470760d69e0)
+
+---
+
+class: center, top
+
+### Lower Runtime Overhead
+
+![](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/01/1484692637bundle-2.png)
+
+---
+
+class: center, top
+
+### Unviersal Browser/Node Interop
+
+![](https://cdn-images-1.medium.com/max/865/1*01koRbmizHhOodkjtV1vmw.png)
+
+---
+
+class: center, top
+
+### Recommended Reading:
+
+#### [TypeScript: Architectural Overview](https://github.com/Microsoft/TypeScript/wiki/Architectural-Overview)
+
+![](https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/architecture.png)
 
 ---
 
@@ -115,10 +219,6 @@ class: center, middle
 ## TypeScript 3.0: The Good Parts
 
 ### TypeScript features that help reduce complexity in larger projects
-
----
-
-### v3.0: Cool New Stuff
 
 ---
 
