@@ -2,7 +2,6 @@ import express from "express";
 import { Express, Request, Response } from "express";
 import API from "../shared/api";
 import { POSTS_PUBLIC_PATH, SERVER_PORT } from "../shared/constants";
-import { fileListContainerRenderer, Renderer } from "../shared/renderer";
 import {
   respondWithRenderedMarkdown,
   respondWithMarkdownJSONList
@@ -17,11 +16,9 @@ app.use("/docs", express.static("docs"));
 app.use("/node_modules", express.static("node_modules"));
 
 app.get("/app", (req: Request, res: Response) => {
-  const landingPageRenderer: Renderer = () => /*html*/ `
-    <h1>Welcome</h1>
-    ${API.renderer.fileListContainerRenderer()}
-  `;
-  const html = API.renderer.layoutRenderer({}, landingPageRenderer);
+  const html = API.renderer.layoutRenderer({}, () =>
+    API.components.AppComponent()
+  );
   // Render some default landing page.
   res.send(html);
 });
