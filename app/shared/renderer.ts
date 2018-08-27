@@ -32,6 +32,9 @@ export const markdownRenderer: Renderer = (
   return marked(locals.markdown, markdownOptions);
 };
 
+export const fileListContainerRenderer: Renderer = (locals = {}) =>
+  /*html*/ `<div class="file-list-container"></div>`;
+
 export const layoutRenderer: Renderer = (
   locals: ITemplateLocals = {},
   subrenderer = nullRenderer,
@@ -61,5 +64,6 @@ export const layoutRenderer: Renderer = (
 export default {
   layoutRenderer,
   markdownRenderer,
-  nullRenderer
+  nullRenderer,
+  fileListContainerRenderer
 };
