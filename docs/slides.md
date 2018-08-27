@@ -178,47 +178,35 @@ class: center, top
 
 ---
 
-### TypeScript 3.0
-
-#### - Not a drastic change from earlier version
-
-#### - Includes a few really awesome features
-
-#### - Becomes even better at building your code with `--build` flag
-
----
-
 class: center, middle
 
-## What TypeScript 3.0 Will and Wont Do For You
+## What TypeScript 3.0 Will and Won't Do For You
 
 ---
-
-### TypeScript 3.0 Still Wont ...
-
-#### - Bundle your non-JS assets like images
-
-#### - Minify your code
-
-#### - Optimize your bundles
+class: center, middle
+### TypeScript 3.0 Still Won't ...
 
 ---
+class: center, top
+#### Bundle things
 
-## TypeScript 3.0 Still Will
+![](https://user-images.githubusercontent.com/24613274/36348958-62c27380-1484-11e8-958b-dfe5df5e838e.gif)
 
-#### - Turn your code's `async` / `await`s, `{...{}}`s, etc into to highly comptaible vanilla JS.
+---
+class: center, top
+#### Minify your code
+![](https://media.giphy.com/media/JUh0yTz4h931K/giphy.gif)
 
-#### - Let you add type annotation information to your code.
-
-#### - Enhance the quality of your code editor's code analysis
+---
+class: center, top
+#### Optimize your bundles
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Knapsack.svg/500px-Knapsack.svg.png)
 
 ---
 
 class: center, middle
 
 ## TypeScript 3.0: The Good Parts
-
-### TypeScript features that help reduce complexity in larger projects
 
 ---
 
@@ -258,20 +246,6 @@ f2("hello", true);
 f1(true);
 f0();
 ```
-
----
-
-class: center, middle
-
-## Project demo
-
-### A Thin Markdown CMS
-
----
-
-class: center, middle
-
-## TypeScript Features To Look out For In This Project
 
 ---
 
@@ -358,18 +332,62 @@ Use a shared base, override individual options
 ---
 
 class: center, middle
+## TypeScript "Classic" Features
 
-## About This Project
+---
+class: top
+#### Transpile Edgy JS Features
+
+```javascript
+const c = { ...a, ...b }; // Spread
+
+// async / await
+const later = async () => {
+  const response = await fetch('/someapi');
+  return response;
+};
+
+// jsx
+const MyComponent = (props: ComponentProps) => (
+  <div secretMessage={props.message}>
+  </div>
+)
+```
+---
+class: top
+#### Let you add type annotation information to your code.
+
+```typescript
+interface Foo {
+  message: string,
+  someNumber: number;
+}
+
+function doubleAndLog(f: Foo): number {
+  const double = f.someNumber * 2;
+  console.log(double, f.someMessage);
+  return double;
+}
+```
+
+---
+class: center, top
+#### Enhance the quality of your code editor's code analysis
+![](https://code.visualstudio.com/assets/docs/editor/intellisense/intellisense.gif)
+
+---
+
+class: center, middle
+
+## Demo Project Time!
 
 ---
 
 ### Caveats
 
-#### - No Webpack, More Boilerplate
+#### - Relies on SystemJS Browser-side (Can be Avoided With Webpack, etc)
 
-#### - Relies on SystemJS Browser-side (Can be Avoided With Webpack)
-
-#### - Build Could Be Faster, More Optimized
+#### - Not Optimized
 
 #### - Assumes all client/server code is "safe" for the public
 
@@ -404,3 +422,9 @@ class: center, middle
 | `build:watch`       | lazy-builds on file changes                           |
 | `build:watch:debug` | same as `build:watch` but more `--verbose`            |
 | `clean`             | blows away `dist/`                                    |
+
+---
+
+### Sample Project
+
+<iframe src="http://localhost:3000/app" width="640" height="480" frameborder=0></iframe>

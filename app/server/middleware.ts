@@ -13,6 +13,19 @@ export const respondWithRenderedMarkdown = async (
   const extension = API.strings.getFileExtension(mdPath);
   const filePathify = (s: string) => `${path.join(process.cwd(), s)}`;
   let contents;
+
+  if (extension === '.json') {
+    contents = await fileLoader.loadFile(
+      filePathify(mdPath.replace(".json", ".md")),
+      { silent: true }
+    );
+    if (!contents) {
+      return res.json({ error: 'File not found! ' });
+    } else {
+      return res.json({ filename: mdPath, markdown: contents });
+    }
+  }
+
   // Look for HTML
   if (extension === ".html" || !extension) {
     // Assume html is the default
@@ -52,8 +65,10 @@ export const respondWithRenderedMarkdown = async (
     } else {
       // Render to HTML
       const html = API.renderer.layoutRenderer(
-        { title: `Markdown Page - ${mdPath}` },
-        () => API.renderer.markdownRenderer({ markdown: contents })
+        {},
+        () => API.components.AppComponent(
+          { contents: API.renderer.markdownRenderer({ markdown: contents }) }
+        )
       );
       res.set({ "Content-Type": "text/html", "Content-Length": html.length });
       return res.send(html);

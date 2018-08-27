@@ -46,3 +46,26 @@ h3 {
   background-color: var(--code-bg-color);
   color: var(--code-text-color);
 }
+
+/** DEMO APP STYLING **/
+
+.content-wrapper {
+  padding: 10px;
+  display: flex;
+}
+
+article {
+  padding: 10px;
+}
+
+nav {
+  padding: 10px;
+}
+
+.content-wrapper .main-nav {
+  flex: 2;
+}
+
+.content-wrapper .content {
+  flex: 5;
+}

@@ -17,7 +17,7 @@ app.use("/node_modules", express.static("node_modules"));
 
 app.get("/app", (req: Request, res: Response) => {
   const html = API.renderer.layoutRenderer({}, () =>
-    API.components.AppComponent()
+    API.components.AppComponent({ contents: '<h1>Welcome</h1> ' })
   );
   // Render some default landing page.
   res.send(html);
