@@ -424,7 +424,10 @@ class: center, middle
 | `clean`             | blows away `dist/`                                    |
 
 ---
+class: top
 
 ### Sample Project
 
-<iframe src="http://localhost:3000/app" width="640" height="480" frameborder=0></iframe>
+Code is available on Github along with these slides
+
+[https://github.com/omardelarosa/typescript-talk](https://github.com/omardelarosa/typescript-talk)
