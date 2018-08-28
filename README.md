@@ -1,5 +1,23 @@
 # TypeScript Composite Project
 
+This project goes along with the talk I gave at NYCHTML5 meetup.  Slides can be seen at:
+
+[https://typescript-as-build-tool.now.sh/#1](https://typescript-as-build-tool.now.sh/#1)
+
+## Installation
+
+### Static Build
+```
+npm install
+npm run build
+```
+
+## Dev Build (Watch Mode)
+```
+npm install
+npm run dev
+```
+
 ## Goals
 
 - use TypeScript as the primary build tool
